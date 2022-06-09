@@ -13,7 +13,7 @@ driver.find_element(By.XPATH, '//*[@id="start"]/button').click()
 element = WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located((By.XPATH, '//*[@id="loading"]')))
 print(element.get_attribute('innerHTML'))
 
-element = WebDriverWait(driver, 10).until(expected_conditions.visibility_of_element_located((By.XPATH, '//*[@id="finish"]/h4')))
+element = WebDriverWait(driver, 10, ignored_exceptions=[Exception]).until(expected_conditions.visibility_of_element_located((By.XPATH, '//*[@id="finish"]/h4')))
 print(element.get_attribute('innerHTML'))
 
 
