@@ -14,17 +14,10 @@ print(f"Input Type : {inputElement.get_attribute('type')}")
 print(f"Input Id : {inputElement.get_attribute('id')}")
 print(f"Input ClassFiles : {inputElement.get_attribute('ClassFiles')}")
 print(f"Input Name : {inputElement.get_attribute('name')}")
-print("Inner HTML" , inputElement.get_attribute("innerHTML"))
-
+print("Inner HTML", inputElement.get_attribute("innerHTML"))
 links = driver.find_elements(By.TAG_NAME, 'a')
 print(len(links))
 
 driver.back()  # redirect to previous page/url
 
 driver.forward()    # Redirect to next
-
-
-
-#driver.quit()
-
-

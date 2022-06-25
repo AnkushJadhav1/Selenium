@@ -11,4 +11,9 @@ for element in elements:
     print(element.text)
 
 element = driver.find_element(By.LINK_TEXT, "seleniumbase.com")
-element.click()
+# element.click()
+
+links = driver.find_elements(By.TAG_NAME, "a")
+
+for element in links:
+    print(element.text)
